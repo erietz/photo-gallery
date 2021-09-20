@@ -70,6 +70,24 @@ def preview_image(filepath):
 
     return render_template("preview.html", path=filepath, caption=filename, metadata=metadata)
 
+@app.route('/next/<path:filepath>')
+def next_image(filepath):
+    index = app.config['IMAGE_PATHS'].index(Path('/') / filepath)
+    if index is None:
+        return 'Error: path does not exist'
+    else:
+        next_path = app.config['IMAGE_PATHS'][index + 1]
+        return redirect(f'/preview/{next_path}')
+
+@app.route('/previous/<path:filepath>')
+def previous_image(filepath):
+    index = app.config['IMAGE_PATHS'].index(Path('/') / filepath)
+    if index is None:
+        return 'Error: path does not exist'
+    else:
+        previous_path = app.config['IMAGE_PATHS'][index - 1]
+        return redirect(f'/preview/{previous_path}')
+
 #-------------------------------------------------------------------------------
 # Main Function
 #-------------------------------------------------------------------------------

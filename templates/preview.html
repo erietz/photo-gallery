@@ -5,6 +5,14 @@
 {% block body %}
     <div id="center">
 
+
+        <a href="/previous/{{path}}">
+            <button>Previous Photo</button>
+        </a>
+        <a href="/next/{{path}}">
+            <button>Next Photo</button>
+        </a>
+
       <figure>
         <img src='/photos/{{path}}' id="preview">
       </figure>
