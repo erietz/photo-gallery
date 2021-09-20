@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/style.css">
+<script type="text/javascript" src="static/script.js"></script>
+</head>
+<body>
+  <div id="center">
+
+    <h1 >Flask Photo Gallery</h1>
+
+    <div>
+      <button name="previous" onclick="load_previous()">Previous</button>
+      <button name="next" onclick="load_next()">Next</button>
+    </div>
+
+      {% for data in image_data %}
+        <figure id="gallery">
+          <!-- <img src='/photos{{ path }}' height=200 width=200 onclick="clicked_img(this)"> -->
+          <a href='/preview/{{data["path"]}}'>
+              <img src='/photos{{ data["path"] }}' height=200 width=200>
+            </a>
+
+          <figcaption>{{ data["caption"] }}</figcaption>
+        </figure>
+      {% endfor %}
+
+  </div>
+
+</body>
+</html>

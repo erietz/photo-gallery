@@ -1,0 +1,102 @@
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+
+}
+
+#top {
+  border: 5px solid #ccc;
+  padding: 10px;
+}
+
+#close {
+  position: fixed;
+  top: 102%;
+  left:50%;
+  transform: translate(-102%, -50%);
+}
+
+/* figure { */
+/*   width: 75vw; */
+/* } */
+
+figure#gallery {
+  float: left;
+  border: 1px #4a4a4f solid;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4%;
+}
+
+figcaption {
+  text-align: center;
+  /* background-color: #4a4a4f; */
+  color: #bebada;
+  /* color: black; */
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+
+#photoContainer {
+  background-color: darkcyan;
+  /* padding: 10px; */
+  /* margin: auto; */
+}
+
+#center {
+  text-align: center;
+}
+
+
+#preview {
+  width: 75vw;
+  min-width: 300px;
+}
+
+button {
+  background-color: #b1b1b1;
+  border-radius: 4%;
+}
+
+/* TABLE STUFF -------------------------------------------------------------- */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  /* width: 50%; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  border-collapse: collapse;
+  padding: 10px;
+  margin: 10px;
+  color: #bebada
+}
+
+/* table headings */
+th, td {
+  padding: 0.5rem;
+  text-align: left;
+  color: #bebada
+}
+
+tr:hover {
+  background-color: rgb(243, 150, 96, 0.3);
+}
