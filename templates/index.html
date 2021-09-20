@@ -14,7 +14,6 @@
 
       {% for data in image_data %}
         <figure id="gallery">
-          <!-- <img src='/photos{{ path }}' height=200 width=200 onclick="clicked_img(this)"> -->
           <a href='/preview/{{data["path"]}}'>
               <img src='/photos{{ data["path"] }}' height=200 width=200>
             </a>
